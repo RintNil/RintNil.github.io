@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="我们知道，计算机只能识别诸如 0101 这样的二进制数，于是人们必须以二进制数据与计算机进行交互，或者先将人类使用的字符按一定规则转换为二进制数。 那什么是字符呢？在计算机领域，我们把诸如文字、标点符号、图形符号、数字等统称为字符。而由字符组成的集合则成为字符集，字符集由于包含字符的多少与异同而形成了各种不同的字符集。 我们知道，所有字符在计算机中都是以二进制来存储的。那么一个字符究竟由多少个二进">
+<meta name="keywords" content="os">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符集与字符集编码详解">
+<meta property="og:url" content="http://yoursite.com/2018/09/14/unicode/index.html">
 <meta property="og:site_name" content="blog">
+<meta property="og:description" content="我们知道，计算机只能识别诸如 0101 这样的二进制数，于是人们必须以二进制数据与计算机进行交互，或者先将人类使用的字符按一定规则转换为二进制数。 那什么是字符呢？在计算机领域，我们把诸如文字、标点符号、图形符号、数字等统称为字符。而由字符组成的集合则成为字符集，字符集由于包含字符的多少与异同而形成了各种不同的字符集。 我们知道，所有字符在计算机中都是以二进制来存储的。那么一个字符究竟由多少个二进">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-14T06:25:52.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog">
+<meta name="twitter:title" content="字符集与字符集编码详解">
+<meta name="twitter:description" content="我们知道，计算机只能识别诸如 0101 这样的二进制数，于是人们必须以二进制数据与计算机进行交互，或者先将人类使用的字符按一定规则转换为二进制数。 那什么是字符呢？在计算机领域，我们把诸如文字、标点符号、图形符号、数字等统称为字符。而由字符组成的集合则成为字符集，字符集由于包含字符的多少与异同而形成了各种不同的字符集。 我们知道，所有字符在计算机中都是以二进制来存储的。那么一个字符究竟由多少个二进">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/14/unicode/"/>
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>blog</title>
+  <title>字符集与字符集编码详解 | blog</title>
   
 
 
@@ -178,8 +183,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,7 +220,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
   </li>
@@ -260,9 +264,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -294,11 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/unicode/" itemprop="url">
-                  字符集与字符集编码详解
-                </a>
+          <h1 class="post-title" itemprop="name headline">字符集与字符集编码详解
               
             
           </h1>
@@ -361,9 +361,7 @@
       
 
       
-        
-          
-            <p>我们知道，计算机只能识别诸如 0101 这样的二进制数，于是人们必须以二进制数据与计算机进行交互，或者先将人类使用的字符按一定规则转换为二进制数。</p>
+        <p>我们知道，计算机只能识别诸如 0101 这样的二进制数，于是人们必须以二进制数据与计算机进行交互，或者先将人类使用的字符按一定规则转换为二进制数。</p>
 <p>那什么是字符呢？在计算机领域，我们把诸如文字、标点符号、图形符号、数字等统称为字符。而由字符组成的集合则成为字符集，字符集由于包含字符的多少与异同而形成了各种不同的字符集。</p>
 <p>我们知道，所有字符在计算机中都是以二进制来存储的。那么一个字符究竟由多少个二进制位来表示呢？这就涉及到字符编码的概念了，比如一个字符集有 8 个字符，那么用 3 个二进制位就可以完全表示该字符集的所有字符，也即每个字符用 3 个二进制位进行编码。</p>
 <p>我们规定字符编码必须完成如下两件事：</p>
@@ -445,8 +443,6 @@
 <p>注3：地球人都知道，大多数Intel兼容机都采用小端法表示数据，而大多数IBM和Sun Microsystems的机器则采用大端法表示数据。例如 0x1234567 这个数，大端法在内存中按字节依次存放为：01 23 45 67，小端法在内存中按字节依次存放为：67 45 23 01。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EncodingTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * https://zh.wikibooks.org/wiki/Unicode/4000-4FFF</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String s = <span class="string">"a中文"</span>;</span><br><span class="line">        System.out.println(s.length()); <span class="comment">//3，char[]的长度就是3</span></span><br><span class="line">        System.out.println(string2Unicode(s)); <span class="comment">// 打印出来的unicode，以UCS-2标准的字符集，\u0061\u4e2d\u6587</span></span><br><span class="line">        System.out.println(unicode2String(string2Unicode(s))); <span class="comment">// 打印“a中文”</span></span><br><span class="line">        System.out.println(toLiteralBytes(s.getBytes())); <span class="comment">//下面三行都打印[61, e4, b8, ad, e6, 96, 87]，按照UTF-8进行编码</span></span><br><span class="line">        System.out.println(toLiteralBytes(s.getBytes(<span class="string">"UTF-8"</span>))); <span class="comment">//[61, e4, b8, ad, e6, 96, 87]</span></span><br><span class="line">        System.out.println(toLiteralBytes(UTF8.encode(s)));  <span class="comment">//[61, e4, b8, ad, e6, 96, 87]</span></span><br><span class="line">        System.out.println(toLiteralBytes(s.getBytes(<span class="string">"ISO8859-1"</span>))); <span class="comment">//[61, 3f, 3f] 3f是ASCII里面的问号？</span></span><br><span class="line">        System.out.println(toLiteralBytes(s.getBytes(<span class="string">"GBK"</span>))); <span class="comment">//[61, d6, d0, ce, c4]，完全兼容GB2312</span></span><br><span class="line">        System.out.println(toLiteralBytes(s.getBytes(<span class="string">"GB2312"</span>))); <span class="comment">//[61, d6, d0, ce, c4]</span></span><br><span class="line"></span><br><span class="line">        String ss = <span class="keyword">new</span> String(s.getBytes(<span class="string">"GB2312"</span>), <span class="string">"GBK"</span>);</span><br><span class="line">        System.out.println(ss);  <span class="comment">//a中文，中文简体完全兼容</span></span><br><span class="line"></span><br><span class="line">        String chinese = <span class="string">"中文"</span>; <span class="comment">//java内部编码，class文件用UTF-8，JVM用UTF-16，JAVA语言内字符集用unicode</span></span><br><span class="line">        String gbkChinese = <span class="keyword">new</span> String(chinese.getBytes(<span class="string">"GBK"</span>), <span class="string">"ISO-8859-1"</span>);<span class="comment">//转换成gbk编码</span></span><br><span class="line">        String unicodeChinese = <span class="keyword">new</span> String(gbkChinese.getBytes(<span class="string">"ISO-8859-1"</span>), <span class="string">"GBK"</span>);<span class="comment">//java内部编码</span></span><br><span class="line">        System.out.println(unicodeChinese);<span class="comment">//中文，是可以还原的，因为ISO8859-1是单字节的，所以无缝还原</span></span><br><span class="line">        String utf8Chinese = <span class="keyword">new</span> String(unicodeChinese.getBytes(<span class="string">"UTF-8"</span>), <span class="string">"ISO-8859-1"</span>);<span class="comment">//utf--8编码做encode</span></span><br><span class="line">        System.out.println(utf8Chinese);<span class="comment">//乱码，UTF-8输出是6个字节，ISO直接是6个字节输出，按照单字节理解，JAVA语言按照unicode来，乱码是ä¸­æ</span></span><br><span class="line">        unicodeChinese = <span class="keyword">new</span> String(utf8Chinese.getBytes(<span class="string">"ISO-8859-1"</span>), <span class="string">"UTF-8"</span>);<span class="comment">//java内部编码</span></span><br><span class="line">        <span class="comment">//unicodeChinese = new String(utf8Chinese.getBytes("ASCII"), "UTF-8");//java内部编码，打印??????,6个问号</span></span><br><span class="line">        System.out.println(unicodeChinese);<span class="comment">//中文</span></span><br><span class="line"></span><br><span class="line">        System.out.println(toLiteralBytes(<span class="string">"a"</span>.getBytes(<span class="string">"Unicode"</span>))); <span class="comment">//[fe, ff, 0, 61]</span></span><br><span class="line">        System.out.println(<span class="string">"a(Unicode)    ："</span> + <span class="string">"a"</span>.getBytes(<span class="string">"Unicode"</span>).length); <span class="comment">//4，2个额外的字节是大尾端的标记fe ff</span></span><br><span class="line">        System.out.println(<span class="string">"a(Unicode)    ："</span> + <span class="string">"aa"</span>.getBytes(<span class="string">"Unicode"</span>).length); <span class="comment">//6</span></span><br><span class="line">        System.out.println(<span class="string">"啊(Unicode)   ："</span> + <span class="string">"啊"</span>.getBytes(<span class="string">"Unicode"</span>).length); <span class="comment">//4</span></span><br><span class="line">        System.out.println(<span class="string">"啊啊(Unicode) ："</span> + <span class="string">"啊啊"</span>.getBytes(<span class="string">"Unicode"</span>).length); <span class="comment">//6</span></span><br><span class="line">        System.out.println(<span class="string">""</span>);</span><br><span class="line">        System.out.println(<span class="string">"a(UTF-8)    ："</span> + <span class="string">"a"</span>.getBytes(<span class="string">"UTF-8"</span>).length); <span class="comment">//1</span></span><br><span class="line">        System.out.println(<span class="string">"aa(UTF-8)   ："</span> + <span class="string">"aa"</span>.getBytes(<span class="string">"UTF-8"</span>).length); <span class="comment">//2</span></span><br><span class="line">        System.out.println(<span class="string">"啊(UTF-8)   ："</span> + <span class="string">"啊"</span>.getBytes(<span class="string">"UTF-8"</span>).length); <span class="comment">//3</span></span><br><span class="line">        System.out.println(<span class="string">"啊啊(UTF-8) ："</span> + <span class="string">"啊啊"</span>.getBytes(<span class="string">"UTF-8"</span>).length); <span class="comment">//6</span></span><br><span class="line">        System.out.println(<span class="string">""</span>);</span><br><span class="line">        System.out.println(<span class="string">"a(UTF-16)    ："</span> + <span class="string">"a"</span>.getBytes(<span class="string">"UTF-16"</span>).length); <span class="comment">//4</span></span><br><span class="line">        System.out.println(<span class="string">"aa(UTF-16)   ："</span> + <span class="string">"aa"</span>.getBytes(<span class="string">"UTF-16"</span>).length); <span class="comment">//6</span></span><br><span class="line">        System.out.println(<span class="string">"啊(UTF-16)   ："</span> + <span class="string">"啊"</span>.getBytes(<span class="string">"UTF-16"</span>).length); <span class="comment">//4</span></span><br><span class="line">        System.out.println(<span class="string">"啊啊(UTF-16) ："</span> + <span class="string">"啊啊"</span>.getBytes(<span class="string">"UTF-16"</span>).length); <span class="comment">//6</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toLiteralBytes</span><span class="params">(<span class="keyword">byte</span>[] bytes)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Bytes.asList(bytes).stream()</span><br><span class="line">                .map(b -&gt; Integer.toHexString(b &amp; <span class="number">0xFF</span>))</span><br><span class="line">                .collect(Collectors.toList())</span><br><span class="line">                .toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符转unicode编码的字符串</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ch 字符</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> unicode编码的字符串</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">toUnicode</span><span class="params">(<span class="keyword">char</span> ch)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (ch &lt; <span class="number">0x10</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"\\u000"</span> + Integer.toHexString(ch);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ch &lt; <span class="number">0x100</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"\\u00"</span> + Integer.toHexString(ch);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ch &lt; <span class="number">0x1000</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"\\u0"</span> + Integer.toHexString(ch);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"\\u"</span> + Integer.toHexString(ch);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">string2Unicode</span><span class="params">(String string)</span> </span>&#123;</span><br><span class="line">        StringBuffer unicode = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; string.length(); i++) &#123;</span><br><span class="line">            unicode.append(toUnicode(string.charAt(i)));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> unicode.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">unicode2String</span><span class="params">(String unicode)</span> </span>&#123;</span><br><span class="line">        StringBuffer string = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        String[] hex = unicode.split(<span class="string">"\\\\u"</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; hex.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> data = Integer.parseInt(hex[i], <span class="number">16</span>);</span><br><span class="line">            string.append((<span class="keyword">char</span>) data);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> string.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">st1</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String ps1;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String sps1;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPs1</span><span class="params">(String ps1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.ps1 = ps1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getSps1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sps1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setSps1</span><span class="params">(String sps1)</span> </span>&#123;</span><br><span class="line">        EncodingTest.sps1 = sps1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (Method m:EncodingTest.class.getMethods())&#123;</span><br><span class="line">            System.out.println(m);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"---------------------"</span>);</span><br><span class="line">        <span class="keyword">for</span> (Method m:EncodingTest.class.getDeclaredMethods())&#123;</span><br><span class="line">            System.out.println(m);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"---------------------"</span>);</span><br><span class="line">        <span class="keyword">for</span> (Field f:EncodingTest.class.getFields())&#123;</span><br><span class="line">            System.out.println(f);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"---------------------"</span>);</span><br><span class="line">        <span class="keyword">for</span> (Field f:EncodingTest.class.getDeclaredFields())&#123;</span><br><span class="line">            System.out.println(f);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            PropertyDescriptor[] ppps= Introspector.getBeanInfo(EncodingTest.class).getPropertyDescriptors();</span><br><span class="line">            <span class="keyword">for</span>(PropertyDescriptor ps:ppps)&#123;</span><br><span class="line">                System.out.println(ps);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IntrospectionException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -464,342 +460,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/how-to-create/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/how-to-create/" itemprop="url">
-                  Hexo创建分类和Tag
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-09-14 00:38:36 / Modified: 14:12:49" itemprop="dateCreated datePublished" datetime="2018-09-14T00:38:36+08:00">2018-09-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/os/" rel="tag"># os</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="1-创建“分类”页面"><a href="#1-创建“分类”页面" class="headerlink" title="1. 创建“分类”页面"></a>1. 创建“分类”页面</h1><ul>
-<li>新建分类页面</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>给分类页面添加类型</p>
-<p>我们在source文件夹中的categories文件夹下找到index.md文件，并在它的头部加上type属性。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;categories&quot;   \#这部分是新添加的</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>给模板添加分类属性</p>
-<p>现在我们打开scarffolds文件夹里的post.md文件，给它的头部加上<code>categories:</code>，这样我们创建的所有新的文章都会自带这个属性，我们只需要往里填分类，就可以自动在网站上形成分类了。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>给文章添加分类</p>
-<p>现在我们可以找到一篇文章，然后尝试给它添加分类</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout: posts</span><br><span class="line">title: 写给小白的express学习笔记1： express-static文件静态管理</span><br><span class="line">date: 2018-06-07 00:38:36</span><br><span class="line">categories: 学习笔记</span><br><span class="line">tags: [node.js, express]</span><br></pre></td></tr></table></figure>
-<h1 id="2-创建“标签”页面"><a href="#2-创建“标签”页面" class="headerlink" title="2. 创建“标签”页面"></a>2. 创建“标签”页面</h1><p>创建”标签”页的方式和创建“分类”一样。</p>
-<ul>
-<li>新建“标签”页面</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>给标签页面添加类型</p>
-<p>我们在source文件夹中的tags文件夹下找到index.md文件，并在它的头部加上type属性。</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2018-08-06 22:48:29</span><br><span class="line">type: &quot;tags&quot; \#新添加的内容</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>给文章添加标签</p>
-<p>有两种写法都可以，第一种是类似数组的写法，把标签放在中括号<code>[]</code>里，用英文逗号隔开</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">layout: posts</span><br><span class="line">title: 写给小白的express学习笔记1： express-static文件静态管理</span><br><span class="line">date: 2018-06-07 00:38:36</span><br><span class="line">categories: 学习笔记</span><br><span class="line">tags: [node.js, express]</span><br></pre></td></tr></table></figure>
-<p>  第二种写法是用<code>-</code>短划线列出来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">layout: posts</span><br><span class="line">title: 写给小白的express学习笔记1： express-static文件静态管理</span><br><span class="line">date: 2018-06-07 00:38:36</span><br><span class="line">categories: 学习笔记</span><br><span class="line">tags:</span><br><span class="line">- node.js</span><br><span class="line">- express</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/14/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rint">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/09/14/how-to-create/" rel="next" title="Hexo创建分类和Tag">
+                <i class="fa fa-chevron-left"></i> Hexo创建分类和Tag
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2018-09-14 00:35:36 / Modified: 14:05:42" itemprop="dateCreated datePublished" datetime="2018-09-14T00:35:36+08:00">2018-09-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -809,14 +499,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -837,8 +528,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -898,6 +598,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ASCII-码："><span class="nav-number">1.</span> <span class="nav-text">1. ASCII 码：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ANSI编码标准"><span class="nav-number">2.</span> <span class="nav-text">2. ANSI编码标准</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Unicode、UCS-和-UTF"><span class="nav-number">3.</span> <span class="nav-text">3. Unicode、UCS 和 UTF</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）Unicode"><span class="nav-number">3.1.</span> <span class="nav-text">（1）Unicode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）-UCS"><span class="nav-number">3.2.</span> <span class="nav-text">（2） UCS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）UTF"><span class="nav-number">3.3.</span> <span class="nav-text">（3）UTF</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UTF-有三种实现方式："><span class="nav-number">4.</span> <span class="nav-text">UTF 有三种实现方式：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1028,6 +744,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
+
 
   
 
